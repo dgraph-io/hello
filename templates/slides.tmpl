@@ -42,7 +42,7 @@
     <section class='slides layout-widescreen'>
       
       <article>
-        <h1>{{.Title}}</h1>
+        <h1 style="color:#FF4200;">{{.Title}}</h1>
         {{with .Subtitle}}<h3>{{.}}</h3>{{end}}
         {{if not .Time.IsZero}}<h3>{{.Time.Format "2 January 2006"}}</h3>{{end}}
         {{range .Authors}}
@@ -57,7 +57,7 @@
   <!-- start of slide {{$s.Number}} -->
       <article>
       {{if $s.Elem}}
-				<h3 style="color:#808A87;">{{$s.Title}}</h3>
+				<h3 style="color:#FF4200;">{{$s.Title}}</h3>
         {{range $s.Elem}}{{elem $.Template .}}{{end}}
       {{else}}
         <h2>{{$s.Title}}</h2>
@@ -68,7 +68,7 @@
   {{end}}{{/* of Slide block */}}
 
       <article>
-        <h3>Thank you</h3>
+        <h3 style="color:#FF4200;">Thank you</h3>
         {{range .Authors}}
           <div class="presenter">
             {{range .Elem}}{{elem $.Template .}}{{end}}
